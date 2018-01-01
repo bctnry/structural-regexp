@@ -90,7 +90,7 @@ sregexp  ::= (literal regexp)
        ((one-or-more)
         (string-append
          "(?:" (sregexp->regexpstr (cadr srx)) "+)"))
-       ((zero-or-more)
+       ((zero-or-one)
         (string-append
          "(?:" (sregexp->regexpstr (cadr srx)) "?)"))
        ((zero-or-more-shortest)
